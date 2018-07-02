@@ -1,6 +1,6 @@
 # Dynamic DNS solution using node.js and Cloudflare
 
-If like me you have an internet connection with dynamic ip (mine changes every 12 hours), and you want to remotely access to a device in your home (computer, NAS, server, etc), you need some sort of dynamic DNS solution. The general idea is to be constantly changing when the ip changes and update a (sub)domain of your choice.   
+If like me you have an internet connection with dynamic ip (mine changes every 12 hours), and you want to remotely access to a device in your home (computer, NAS, server, etc), you need some sort of dynamic DNS solution. The general idea is to be constantly checking when the ip changes and update a (sub)domain of your choice.   
 
 This scripts assumes that your domain is handled by Cloudflare's DNS, if you have it elsewhere, you can easily migrate it and get all the benefits from Cloudflare (CDN, HTTPs, etc), if you don't know the service, check it out, it's worth it. The node.js script checks the current ip using a public service (https://www.ipify.org/) and compares it with the ip address stored in Cloudflare, if they are different, the A DNS entry is updated. 
 
